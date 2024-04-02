@@ -2,7 +2,7 @@
 //add, remove, items in a arraylist of arraylists, maybe a search method using apcsa things, 
 public class App {
     public static void main(String[] args) throws Exception {
-        
-        //1
+        invontory MyINVO = new invontory();
+    MyINVO.Display();
     }
 }

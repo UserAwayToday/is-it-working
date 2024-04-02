@@ -38,40 +38,49 @@ public class invontory {
        Armors.put("beetle Armor", 5);
        Armors.put("Vortex Armor", 5);   
        //potinos 
-       Potions.put("", 5);   
-       Potions.put("", 5); 
-       Potions.put("", 5); 
-       Potions.put("", 5);   
-       Potions.put("", 5); 
-       Potions.put("", 5);
-       Potions.put("", 5);   
-       Potions.put("", 5); 
-       Potions.put("", 5);
-       Potions.put("", 5);   
-       Potions.put("", 5); 
-       Potions.put("", 5);
+       Potions.put("Lesser Healing", 5);   
+       Potions.put("Healing", 5); 
+       Potions.put("Greater Healing", 5); 
+       Potions.put("Super Healing", 5);   
+       Potions.put("Lesser Restoration", 5); 
+       Potions.put("Restoration", 5);
+       Potions.put("Lesser Mana", 5);   
+       Potions.put("Mana", 5); 
+       Potions.put("Greater Mana", 5);
+       Potions.put("Super Mana", 5);   
+       Potions.put("Battle", 5); 
+       Potions.put("Invisibility", 5);
        //Materials
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
-       Materials.put("", 5);
+       Materials.put("Wood", 5);
+       Materials.put("Stone", 5);
+       Materials.put("Iron", 5);
+       Materials.put("Siliver", 5);
+       Materials.put("Lead", 5);
+       Materials.put("Gold", 5);
+       Materials.put("Platnium", 5);
+       Materials.put("HellStone", 5);
+       Materials.put("Meteorite", 5);
+       Materials.put("Obsidian", 5);
+       Materials.put("Palladium", 5);
+       Materials.put("Mythril", 5);
+       Materials.put("Hollow", 5);
+       Materials.put("Solar", 5);
+       Materials.put("Vortex", 5);
        //adding everyhting
        WholeInvontory.add(Swords);
        WholeInvontory.add(Armors);
        WholeInvontory.add(Potions);
        WholeInvontory.add(Materials);
+    }
+    public void Display(){
+        for (int i = 0 ; i < WholeInvontory.size(); i ++){
+            System.out.println( WholeInvontory.get(i));
+        }
+       
+    }
+    public void SortMapKey(){
+        List<String> itemsKey = new ArrayList<>(Swords.keyset());
+
     }
 
    
