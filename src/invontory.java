@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.TreeMap;
 public class invontory {
-    ArrayList<HashMap> WholeInvontory = new ArrayList<HashMap>();
-    HashMap <String,Integer> Swords  = new HashMap <String,Integer> ();
-    HashMap <String,Integer> Armors  = new HashMap <String,Integer> ();
-    HashMap <String,Integer> Potions  = new HashMap <String,Integer> ();
-    HashMap <String,Integer> Materials  = new HashMap <String,Integer> ();
+    ArrayList<TreeMap> WholeInvontory = new ArrayList<TreeMap>();
+    TreeMap <String,Integer> Swords  = new TreeMap <String,Integer> ();
+    TreeMap <String,Integer> Armors  = new TreeMap <String,Integer> ();
+    TreeMap <String,Integer> Potions  = new TreeMap <String,Integer> ();
+    TreeMap <String,Integer> Materials  = new TreeMap <String,Integer> ();
     
     public invontory(){
         //Swords
@@ -76,11 +77,15 @@ public class invontory {
         for (int i = 0 ; i < WholeInvontory.size(); i ++){
             System.out.println( WholeInvontory.get(i));
         }
-       
+        
     }
-    public void SortMapKey(){
-        List<String> itemsKey = new ArrayList<>(Swords.keyset());
-
+    public void SortMaps(int x){
+        x = x-1;
+        TreeMap <String,Integer> Temp  = new TreeMap <String,Integer> ();
+        for (int i = 0 ; i < WholeInvontory.get(x).size(); i ++){
+           // temp.put(WholeInvontory.get(x.get(i)));
+        }
+        
     }
 
    
