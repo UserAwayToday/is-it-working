@@ -1,6 +1,8 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.TreeMap;
+import java.util.Iterator;
+import java.util.Map;
+
 public class invontory {
     ArrayList<TreeMap> WholeInvontory = new ArrayList<TreeMap>();
     TreeMap <String,Integer> Swords  = new TreeMap <String,Integer> ();
@@ -8,6 +10,11 @@ public class invontory {
     TreeMap <String,Integer> Potions  = new TreeMap <String,Integer> ();
     TreeMap <String,Integer> Materials  = new TreeMap <String,Integer> ();
     
+    int S = 0;
+    int A = 1;
+    int P = 2;
+    int M = 3;
+
     public invontory(){
         //Swords
         Swords.put("Copper Sword",1);
@@ -73,21 +80,51 @@ public class invontory {
        WholeInvontory.add(Potions);
        WholeInvontory.add(Materials);
     }
+    //displays all the invontory
     public void Display(){
         for (int i = 0 ; i < WholeInvontory.size(); i ++){
             System.out.println( WholeInvontory.get(i));
+
         }
-        
-    }
-    public void SortMaps(int x){
-        x = x-1;
-        TreeMap <String,Integer> Temp  = new TreeMap <String,Integer> ();
-        for (int i = 0 ; i < WholeInvontory.get(x).size(); i ++){
-           // temp.put(WholeInvontory.get(x.get(i)));
-        }
+
+       /*  for (Map.Entry<String,Integer> entry : Swords.entrySet()){
+            System.out.println(entry.getKey()+""+entry.getValue());
+        }*/
         
     }
 
+    //prints out invi treemaps
+    public void AlphaSort(int x){
+        x = x-1;
+        if(x == S){
+            for (Map.Entry<String,Integer> entry : Swords.entrySet()){
+                System.out.println(entry.getKey()+""+entry.getValue());
+        }
+
+        }else if (x == A){
+            for (Map.Entry<String,Integer> entry : Armors.entrySet()){
+                System.out.println(entry.getKey()+""+entry.getValue());
+            }
+
+        }else if (x == P){
+            for (Map.Entry<String,Integer> entry : Potions.entrySet()){
+                System.out.println(entry.getKey()+""+entry.getValue());
+            }
+
+        }else if (x == M){
+            for (Map.Entry<String,Integer> entry : Materials.entrySet()){
+                System.out.println(entry.getKey()+""+entry.getValue());
+            }
+
+        }   
+        
+    }
+    
+    public void numercSort(int x){
+        x = x -1;
+
+
+    }
    
 
 }
