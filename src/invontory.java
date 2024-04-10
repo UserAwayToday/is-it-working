@@ -3,6 +3,7 @@ import java.util.TreeMap;
 import java.util.Iterator;
 import java.util.Map;
 
+
 public class invontory {
     ArrayList<TreeMap> WholeInvontory = new ArrayList<TreeMap>();
     TreeMap <String,Integer> Swords  = new TreeMap <String,Integer> ();
@@ -86,11 +87,6 @@ public class invontory {
             System.out.println( WholeInvontory.get(i));
 
         }
-
-       /*  for (Map.Entry<String,Integer> entry : Swords.entrySet()){
-            System.out.println(entry.getKey()+""+entry.getValue());
-        }*/
-        
     }
 
     //prints out invi treemaps
@@ -98,31 +94,51 @@ public class invontory {
         x = x-1;
         if(x == S){
             for (Map.Entry<String,Integer> entry : Swords.entrySet()){
-                System.out.println(entry.getKey()+""+entry.getValue());
+                System.out.println(entry.getKey()+" "+entry.getValue());
         }
 
         }else if (x == A){
             for (Map.Entry<String,Integer> entry : Armors.entrySet()){
-                System.out.println(entry.getKey()+""+entry.getValue());
+                System.out.println(entry.getKey()+" "+entry.getValue());
             }
 
         }else if (x == P){
             for (Map.Entry<String,Integer> entry : Potions.entrySet()){
-                System.out.println(entry.getKey()+""+entry.getValue());
+                System.out.println(entry.getKey()+" "+entry.getValue());
             }
 
         }else if (x == M){
             for (Map.Entry<String,Integer> entry : Materials.entrySet()){
-                System.out.println(entry.getKey()+""+entry.getValue());
+                System.out.println(entry.getKey()+" "+entry.getValue());
             }
-
         }   
-        
     }
-    
+
+    //
     public void numercSort(int x){
         x = x -1;
 
+    }
+
+    //
+    public void adding(int x, String y, int z){
+        x = x -1;
+        if (x == S){
+            Swords.put(y,z);
+        }
+        else if (x == A){
+            Swords.put(y,z);
+        }
+        else if (x == P){
+            Swords.put(y,z);
+        }
+        else if (x == M){
+            Swords.put(y,z);
+        }
+    }
+
+    //
+    public void remove(int x, String y, int z){
 
     }
    
