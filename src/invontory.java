@@ -10,7 +10,6 @@ public class invontory {
     TreeMap <String,Integer> Armors  = new TreeMap <String,Integer> ();
     TreeMap <String,Integer> Potions  = new TreeMap <String,Integer> ();
     TreeMap <String,Integer> Materials  = new TreeMap <String,Integer> ();
-    
     int S = 0;
     int A = 1;
     int P = 2;
@@ -81,7 +80,7 @@ public class invontory {
        WholeInvontory.add(Potions);
        WholeInvontory.add(Materials);
     }
-    //displays all the invontory
+
     public void Display(){
         for (int i = 0 ; i < WholeInvontory.size(); i ++){
             System.out.println( WholeInvontory.get(i));
@@ -89,7 +88,6 @@ public class invontory {
         }
     }
 
-    //prints out invi treemaps
     public void AlphaSort(int x){
         x = x-1;
         if(x == S){
@@ -113,34 +111,38 @@ public class invontory {
             }
         }   
     }
-
-    //
-    public void numercSort(int x){
-        x = x -1;
-
-    }
-
-    //
+    
     public void adding(int x, String y, int z){
         x = x -1;
         if (x == S){
             Swords.put(y,z);
         }
         else if (x == A){
-            Swords.put(y,z);
+            Armors.put(y,z);
         }
         else if (x == P){
-            Swords.put(y,z);
+            Potions.put(y,z);
         }
         else if (x == M){
-            Swords.put(y,z);
+            Materials.put(y,z);
         }
     }
 
-    //
     public void remove(int x, String y, int z){
-
+        x = x -1;
+        if (x == S){
+            Swords.remove(y,z);
+        }
+        else if (x == A){
+            Armors.remove(y,z);
+        }
+        else if (x == P){
+            Potions.remove(y,z);
+        }
+        else if (x == M){
+            Materials.remove(y,z);
+        } 
     }
-   
 
+    Public void 
 }
